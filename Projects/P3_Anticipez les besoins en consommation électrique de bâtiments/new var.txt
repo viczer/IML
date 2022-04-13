@@ -1,0 +1,11 @@
+BUILDING_AGE
+df_b["BUILDING_AGE"] = datetime.datetime.now().year - df_b["YearBuilt"]
+
+RATIO_ELECTRICITY
+df_b["RATIO_ELECTRICITY"] = round(df_b["Electricity(kBtu)"] / df_b["SiteEnergyUse(kBtu)"] * 100, 5)
+
+renamed_PropertyType =  PropertyType_NEW
+ "PropertyType" : RENAME_PROPERTY_TYPE
+
+------
+"electricity" : "RATIO_ELECTRICITY", "gfa_total" : "PropertyGFATotal", "number_floors" : "NumberofFloors", "number_buildings" : "NumberofBuildings"
